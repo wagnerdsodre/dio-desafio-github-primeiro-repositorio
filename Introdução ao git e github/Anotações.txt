@@ -1,0 +1,4 @@
+Informações úteis:
+#Download:
+GIT:https://git-scm.com/downloads
+Git Bash é usado para controle de versões distribuidas
