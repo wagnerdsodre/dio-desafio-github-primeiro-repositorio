@@ -2,3 +2,97 @@ Informações úteis:
 #Download:
 GIT:https://git-scm.com/downloads
 Git Bash é usado para controle de versões distribuidas
+
+###Comandos básicos:
+GitHub - versionamneto
+ls -lista
+cd / - acessa pasta raiz
+cd ../ - sai da pasta um stage - volta para a pasta raiz
+cd .. 
+cls - limpa a tela ou ctrl + l
+tab - autocompleta tipo cd W+tab + acessar pasta do windows)
+mkdir workspace = criar a pasta workspace
+mv workspace - move o diretorio workspace
+echo hello = imprimir hello
+echo hello > hello.txt = salva hello no arquivo hello txt
+mv hello.txt ./receitas - move o hello.txt para a pasta receitas
+rmdir workspace /S /Q
+rm -rf workspace/ = remove pasta e conteudo no linux
+
+git status - verifica se ha arquivos para alteração
+git config --global user.email "wagnerdsodre@gmail.com"
+git config --global user.name "wagnerdsodre@gmail.com"
+git init - inicia o repositorio
+git * - adiciona tudo o que esta no repositorio  
+
+
+###como o github funciona por debaixo dos panos
+openssl sha1 texto.txt
+
+##objetos internos do github
+blobs
+trees
+commits
+
+##comandos: 
+echo 'conteudo' | git hash-object -stdin
+echo -e 'blob 9\' | openssl sha1
+
+##comandos na prática 
+git init
+ls -a  -lista arquivos ocultos
+cd .git/ - lista a estrutura
+
+
+
+TRABALHADO COM GIT
+1 - cria sua pasta no repositorio
+2 - git remote add origin https://github.com/wagnerdsodre/Problema-de-Monty-Hall-com-React-e-Next-Js.git
+3 - git remote-v  - com ele voce verifica se esta tudo certo com o repositorio
+4-  git commit -m "mensagem do commit"
+5 - git push origin master
+
+
+git remote add origin https://github.com/wagnerdsodre/Problema-de-Monty-Hall-com-React-e-Next-Js.git
+git branch -M main
+git commit -m "Problema de Monty Wall com Next e React Js"
+git push -u origin main
+
+
+
+###Como resolvemosproblemas
+git pull origin master  --- ira puxar e  atualizar o repositorio local com o da nuvem
+
+
+
+## Modulo 2 - Trabalhando com branch
+git branche - Indica as branchs  ou git branch --list
+Head ? Aponta para o ultimo commit
+git branch -m novoNome - Mudar o nome da branch atual
+git branch -m novoNome nomeAntigo - volta pro nome antigo
+git branch -d nomedaBranchParaDeletar
+git stash save "Alterando arquivos" -irá limpar para quando trocar de branch nao levar nada para o branch trocado com checkout
+git stash pop 1- tira do stash os arquivos
+git stash list - listar os stashs
+git stash clear - limpa os stashs
+git log - conhecer o historico 
+git log Readme.md - mostra o histórico desse arquivo - aperte dois pontos q para sair
+git log --oneline lista o historico em linha amigavel
+git log --graph - modo grafico de logs
+gitk - logs de formais mais angavel
+git checkout -b nome-da-branch  - Irá criar e se mover para a nova branch 
+git checkout main - Muda o head para a branch main
+git marge nomeDaBranch - irá fundir as branchs main com nomeDaBranch
+
+
+
+## Reverter commits
+git reset hash
+git reset --soft HEAD^1
+
+
+git config --config --list - lista minha configuraçao dentro do repository
+git config --global core.editor "code --wait" - setando o editor para code
+git config --global --unset code.editor refaz a mudança do editor voltando para o padrão
+git config --global core.editor "vim"
+closes #1 - rodape
